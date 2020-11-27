@@ -63,7 +63,8 @@ function draw(){
   ghost.collide(climberGroup);
   spawnDoors();
   }
-  else if(gameState === "end"){
+  drawSprites();
+  if(gameState === "end"){
     background(0);
     background1.visible = false;
     ghost.visible=false;
@@ -72,10 +73,8 @@ function draw(){
     fill("yellow");
     textSize(32);
     text("GAME OVER", 200,320);
-    doorGroup.setLifetimeEach(0);
-    climberGroup.setLifetimeEach(0);
   }
-  drawSprites();
+  
 }
 
 
