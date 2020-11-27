@@ -63,6 +63,7 @@ function draw(){
   ghost.collide(climberGroup);
   spawnDoors();
   }
+  
   drawSprites();
   if(gameState === "end"){
     background(0);
@@ -73,13 +74,15 @@ function draw(){
     fill("yellow");
     textSize(32);
     text("GAME OVER", 200,320);
+    
   }
+  
   
 }
 
 
 function spawnDoors(){
-  if(frameCount%200  === 0 ) {
+  if(frameCount%20  === 0 ) {
     door = createSprite(200,100,20,20);
     door.x = Math.round(random(100,500))
     door.addImage(doorImage);
