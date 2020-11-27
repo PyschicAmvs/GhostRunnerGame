@@ -72,8 +72,8 @@ function draw(){
     fill("yellow");
     textSize(32);
     text("GAME OVER", 200,320);
-    doorGroup.setVisibilityEach(false);
-    climberGroup.setVisibilityEach(false);
+    doorGroup.setLifetimeEach(0);
+    climberGroup.setLifetimeEach(0);
   }
   drawSprites();
 }
